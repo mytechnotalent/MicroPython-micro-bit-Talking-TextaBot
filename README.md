@@ -108,7 +108,6 @@ def bot(ted, question):
         
     Returns
     -------
-    
     None
     """
     # Init LED happy image 
