@@ -1,7 +1,7 @@
 ![image](https://github.com/mytechnotalent/MicroPython-micro-bit_Talking_TextaBot/blob/main/MicroPython-micro-bit%20Talking%20TextaBot.png?raw=true)
 
 # MicroPython-micro-bit
-# Talking_TextaBot
+# Talking TextaBot
 
 This is a FUN talking TextaBot for the official BBC micro:bit V2 where you get to build your VERY OWN TALKING TEXTABOT FROM SCRATCH!
 
