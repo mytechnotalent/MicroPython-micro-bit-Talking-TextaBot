@@ -31,7 +31,6 @@ This is a FUN talking TextaBot for the official BBC micro:bit V2 where you get t
 ![image](https://github.com/mytechnotalent/MicroPython-micro-bit_Talking_TextaBot/blob/main/STEP%206.png?raw=true)
 
 ## STEP 7: Copy Talking TextaBot Python Code Template Into Python Web Editor
-
 # CODE
 ```python
 import time
