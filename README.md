@@ -243,7 +243,12 @@ generic_ted = {
 The following are a list of controls to work with TextaBot.
 * A Button = Cycle through the letters until you find the letter of choice to build our word.
 * B Button = Cycle-back through the letters until you find the letter of choice to build our word.
+* Logo Image = Add the currently displayed letter to the word.  The word will start out blank so if the letter currently displayed is `a` an `a` will be added to the word.  You can add more letters to your word by using the A and B Buttons to cycle and then press the Logo Image again to add the next currently displayed letter to the word.
+* Pin1 = Touch Pin1 to add a space if you are making more than one word for your trigger words.
+* Pin2 = Touch Pin2 to send your word or words to Mr. George so he can respond to you!
 
+## STEP 15:  Add More Trigger Word/Words & TextaBot Responses To The Database!
+Let's teach our TextaBot more stuff!  Repeat 12, 13 and 14 as much as you like!
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
