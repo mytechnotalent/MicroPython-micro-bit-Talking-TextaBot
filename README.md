@@ -1,4 +1,4 @@
-![image](
+![image](https://github.com/mytechnotalent/MicroPython-micro-bit_Talking_TextaBot/blob/main/MicroPython-micro-bit%20Talking%20TextaBot.png?raw=true)
 
 # MicroPython-micro-bit
 # Talking_TextaBot
