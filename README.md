@@ -190,9 +190,6 @@ try:
             time.sleep(PRESS_TIME)
             
         if not pin2.read_digital():
-            # display.show(Image.SURPRISED)
-            # say(word, speed=SPEED)
-            # display.show(Image.HAPPY)
             bot(generic_ted, word)
             word = ''
             time.sleep(PRESS_TIME + 0.75)
