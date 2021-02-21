@@ -61,19 +61,12 @@ display.show(alphabet[alphabet_position])
 time.sleep(PRESS_TIME)
 
 
-def bot(ted, question):
-    """Bot function
+def bot_proc(ted, question):
+    """Bot proc function
     
-    Parameters
-    ----------
-    ted : dict
-        Talking educational database to utilize
-    question : str
-        Question to parse for trigger words
-        
-    Returns
-    -------
-    None
+    Params:
+        ted : dict
+        question : str
     """
     # Init LED happy image 
     display.show(Image.HAPPY)
@@ -155,7 +148,7 @@ try:
             time.sleep(PRESS_TIME)
             
         if not pin2.read_digital():
-            bot(generic_ted, word)
+            bot_proc(generic_ted, word)
             word = ''
             time.sleep(PRESS_TIME + 0.75)
             display.show(alphabet[alphabet_position])
