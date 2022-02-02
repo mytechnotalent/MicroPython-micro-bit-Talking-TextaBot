@@ -61,8 +61,9 @@ display.show(alphabet[alphabet_position])
 time.sleep(PRESS_TIME)
 
 
-def bot_proc(ted, question):
-    """Bot proc function
+def bot(ted, question):
+    """
+    Function to handle bot
     
     Params:
         ted : dict
@@ -70,20 +71,16 @@ def bot_proc(ted, question):
     """
     # Init LED happy image 
     display.show(Image.HAPPY)
-
     # This is an advanced topic as well however this little function
     # cleans out the unnecessary global objects or variables on what
     # we call the heap area in memory
     gc.collect()
-    
     # Init response object
     response = ''
-    
     # We want to make sure that our dictionary database can 
     # find all values even if you use a capital letter
     # so we convert everything to lowercase 
     question = question.lower()
-    
     # If you type something other than an empty string that means 
     # question has a value so the rest of the code will continue
     # on
@@ -94,9 +91,7 @@ def bot_proc(ted, question):
         # match an entry in the dictionary database and if it does
         # put the value in the _response object
         response = [val for key, val in ted.items() if key in question]
-        
         gc.collect()
-        
         # If our bot got a response from us then make sure
         # we trigger the speaking or suprised image so our bot
         # can open its mouth to talk and then have our bot
@@ -113,7 +108,6 @@ def bot_proc(ted, question):
             print('BOT: That is not something I am familiar with.')
             say('That is not something I am familiar with.', speed=SPEED)
             display.show(Image.HAPPY)
-            
     gc.collect()
     
 
@@ -148,7 +142,7 @@ try:
             time.sleep(PRESS_TIME)
             
         if not pin2.read_digital():
-            bot_proc(generic_ted, word)
+            bot(generic_ted, word)
             word = ''
             time.sleep(PRESS_TIME + 0.75)
             display.show(alphabet[alphabet_position])
