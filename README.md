@@ -130,7 +130,6 @@ def bot(ted, question):
         # match an entry in the dictionary database and if it does
         # put the value in the _response object
         response = [val for key, val in ted.items() if key in question]
-        
         gc.collect()
         
         # If our bot got a response from us then make sure
@@ -141,19 +140,13 @@ def bot(ted, question):
         # recognized then provide a custom default response
         if response:
             display.show(Image.SURPRISED)
-            
             print('BOT: {0}'.format(response[0]))
-            
             say(str(response[0]), speed=SPEED)
-            
             display.show(Image.HAPPY)
         else:
             display.show(Image.SURPRISED)
-            
             print('BOT: That is not something I am familiar with.')
-            
             say('That is not something I am familiar with.', speed=SPEED)
-            
             display.show(Image.HAPPY)
             
     gc.collect()
@@ -167,43 +160,31 @@ try:
             else:
                 alphabet_position += 1
                 display.show(alphabet[alphabet_position])
-                
                 time.sleep(PRESS_TIME)
-    
         if button_b.is_pressed():
             if alphabet_position <= 0:
                 time.sleep(PRESS_TIME)
             else:
                 alphabet_position -= 1
                 display.show(alphabet[alphabet_position])
-                
                 time.sleep(PRESS_TIME)
-    
         if pin_logo.is_touched():
             word += alphabet[alphabet_position]
             display.scroll(word)
-            
             time.sleep(PRESS_TIME)
-            
             display.show(alphabet[alphabet_position])
-
         if not pin1.read_digital():
             space = ' '
             word += space
-            
             display.show('_')
-            
             time.sleep(PRESS_TIME)
-            
         if not pin2.read_digital():
             bot(generic_ted, word)
             word = ''
-            
             time.sleep(PRESS_TIME + 0.75)
-            
             display.show(alphabet[alphabet_position])
             
-            gc.collect()
+        gc.collect()
 except:
     pass
 ```
